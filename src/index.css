@@ -107,3 +107,9 @@ body {
 .search::placeholder {
   color: var(--color-text-dark);
 }
+
+.search:focus {
+  outline: none;
+  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
