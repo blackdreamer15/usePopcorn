@@ -28,3 +28,11 @@ body {
   background-color: var(--color-background-900);
   padding: 2.4rem;
 }
+
+/* ******* */
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
