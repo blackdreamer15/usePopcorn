@@ -140,3 +140,7 @@ body {
   padding: 0.8rem 0;
   overflow: scroll;
 }
+
+.list-watched {
+  height: calc(100% - 9rem);
+}
