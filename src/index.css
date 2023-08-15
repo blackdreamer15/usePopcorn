@@ -79,3 +79,7 @@ body {
   align-items: center;
   gap: 0.8rem;
 }
+
+.logo span {
+  font-size: 3.2rem;
+}
