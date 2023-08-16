@@ -157,3 +157,8 @@ body {
   padding: 1.6rem 3.2rem;
   border-bottom: 1px solid var(--color-background-100);
 }
+
+.list.list-movies li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
