@@ -166,3 +166,8 @@ body {
 .list.list-movies li:hover {
   background-color: var(--color-background-100);
 }
+
+.list img {
+  width: 100%;
+  grid-row: 1 / -1;
+}
