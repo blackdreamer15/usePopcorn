@@ -181,3 +181,9 @@ body {
   align-items: center;
   gap: 2.4rem;
 }
+
+.list p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
