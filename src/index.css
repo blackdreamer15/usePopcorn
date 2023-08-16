@@ -175,3 +175,9 @@ body {
 .list h3 {
   font-size: 1.8rem;
 }
+
+.list div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
