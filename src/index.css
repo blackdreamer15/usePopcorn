@@ -254,3 +254,7 @@ body {
   flex-direction: column;
   gap: 1.6rem;
 }
+
+.details img {
+  width: 33%;
+}
