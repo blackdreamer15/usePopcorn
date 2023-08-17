@@ -222,3 +222,11 @@ body {
   font-size: 1.6rem;
   margin-bottom: 0.6rem;
 }
+
+.summary div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
