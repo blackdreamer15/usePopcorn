@@ -306,3 +306,13 @@ body {
 .btn-add:hover {
   background-color: var(--color-primary-light);
 }
+
+.seconds {
+  background-color: var(--color-background-100);
+  width: 8rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.4rem;
+  margin-top: 2.4rem;
+}
