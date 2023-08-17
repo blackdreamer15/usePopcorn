@@ -230,3 +230,11 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
 }
+
+.summary p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ******* */
