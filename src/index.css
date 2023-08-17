@@ -267,3 +267,9 @@ body {
   flex-direction: column;
   gap: 1.4rem;
 }
+
+.details-overview h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.1;
+}
