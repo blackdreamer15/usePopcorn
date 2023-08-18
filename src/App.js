@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -50,6 +52,9 @@ const tempWatchedData = [
 
 
 export default function App() {
+  const [isOpen, setIsOpen] = useState(true);
+
+
   return (
     <>
       <nav className="nav-bar">
