@@ -53,7 +53,8 @@ export default function App() {
   return (
     <nav className="nav-bar">
       <div className="logo">
-
+        <span>🍿</span>
+        <h1>usePopcorn</h1>
       </div>
     </nav>
   );
