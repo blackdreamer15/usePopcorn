@@ -57,9 +57,7 @@ export default function App() {
         <h1>usePopcorn</h1>
       </div>
 
-      <div className="search">
-        <input type="text" />
-      </div>
+      <input type="text" className="search" />
 
       <div className="num-results"></div>
     </nav>
