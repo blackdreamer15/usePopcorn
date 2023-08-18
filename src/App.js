@@ -74,13 +74,13 @@ export default function App() {
       <main className="main">
         <div className="box">
           <button className="btn-toggle">
-            {isOpen ? "+" : "-"}
+            {isOpen1 ? "+" : "-"}
           </button>
         </div>
 
         <div className="box">
           <button className="btn-toggle">
-            {isOpen ? "+" : "-"}
+            {isOpen2 ? "+" : "-"}
           </button>
         </div>
       </main>
