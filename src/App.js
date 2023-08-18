@@ -65,11 +65,11 @@ export default function App() {
 
       <main className="main">
         <div className="box">
-          <button className="btn-toggle"></button>
+          <button className="btn-toggle">+</button>
         </div>
 
         <div className="box">
-          <button className="btn-toggle"></button>
+          <button className="btn-toggle">+</button>
         </div>
       </main>
     </>
