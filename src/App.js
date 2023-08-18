@@ -63,7 +63,10 @@ export default function App() {
         <div className="num-results"></div>
       </nav>
 
-      <main className="main"></main>
+      <main className="main">
+        <div className="box"></div>
+        <div className="box"></div>
+      </main>
     </>
   );
 }
