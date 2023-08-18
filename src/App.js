@@ -73,13 +73,17 @@ export default function App() {
 
       <main className="main">
         <div className="box">
-          <button className="btn-toggle">
+          <button className="btn-toggle"
+            onClick={() => setIsOpen1(isOpen1 => !isOpen1)}
+          >
             {isOpen1 ? "+" : "-"}
           </button>
         </div>
 
         <div className="box">
-          <button className="btn-toggle">
+          <button className="btn-toggle"
+            onClick={() => setIsOpen2(isOpen2 => !isOpen2)}
+          >
             {isOpen2 ? "+" : "-"}
           </button>
         </div>
