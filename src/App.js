@@ -56,6 +56,8 @@ export default function App() {
         <span>🍿</span>
         <h1>usePopcorn</h1>
       </div>
+
+      <div className="search"></div>
     </nav>
   );
 }
