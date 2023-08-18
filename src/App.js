@@ -58,6 +58,8 @@ export default function App() {
       </div>
 
       <div className="search"></div>
+
+      <div className="num-results"></div>
     </nav>
   );
 }
