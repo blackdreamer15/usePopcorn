@@ -60,7 +60,9 @@ export default function App() {
 
         <input type="text" className="search" />
 
-        <div className="num-results"></div>
+        <p className="num-results">
+
+        </p>
       </nav>
 
       <main className="main">
