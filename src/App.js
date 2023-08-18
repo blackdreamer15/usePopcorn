@@ -52,7 +52,9 @@ const tempWatchedData = [
 export default function App() {
   return (
     <nav className="nav-bar">
+      <div className="logo">
 
+      </div>
     </nav>
   );
 }
