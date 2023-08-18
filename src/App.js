@@ -51,17 +51,19 @@ const tempWatchedData = [
 
 export default function App() {
   return (
-    <nav className="nav-bar">
-      <div className="logo">
-        <span>🍿</span>
-        <h1>usePopcorn</h1>
-      </div>
+    <>
+      <nav className="nav-bar">
+        <div className="logo">
+          <span>🍿</span>
+          <h1>usePopcorn</h1>
+        </div>
 
-      <input type="text" className="search" />
+        <input type="text" className="search" />
 
-      <div className="num-results"></div>
-    </nav>
+        <div className="num-results"></div>
+      </nav>
 
-    <main className="main"></main>
+      <main className="main"></main>
+    </>
   );
 }
