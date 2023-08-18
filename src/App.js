@@ -64,8 +64,13 @@ export default function App() {
       </nav>
 
       <main className="main">
-        <div className="box"></div>
-        <div className="box"></div>
+        <div className="box">
+          <button className="btn-toggle"></button>
+        </div>
+
+        <div className="box">
+          <button className="btn-toggle"></button>
+        </div>
       </main>
     </>
   );
