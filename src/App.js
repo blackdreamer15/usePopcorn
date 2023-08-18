@@ -61,5 +61,7 @@ export default function App() {
 
       <div className="num-results"></div>
     </nav>
+
+    <main className="main"></main>
   );
 }
