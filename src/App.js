@@ -61,7 +61,7 @@ export default function App() {
         <input type="text" className="search" />
 
         <p className="num-results">
-
+          Found <strong>X</strong> results
         </p>
       </nav>
 
