@@ -111,40 +111,44 @@ export default function App() {
           >
             {isOpen2 ? "+" : "-"}
 
-            {!isOpen2 &&
-              <ul className="list">
-                {tempWatchedData.map(movie => (
-                  <li key={movie.imdbID}>
-                    <img
-                      src={movie.Poster}
-                      alt={`${movie.Title} poster`}
-                    />
+            {!isOpen2 && (
+              <>
+                <div></div>
 
-                    <h3>{movie.Title}</h3>
+                <ul className="list">
+                  {tempWatchedData.map(movie => (
+                    <li key={movie.imdbID}>
+                      <img
+                        src={movie.Poster}
+                        alt={`${movie.Title} poster`}
+                      />
 
-                    <div>
-                      <p>
-                        <span>⭐</span>
-                        <span>{movie.imdbRating}</span>
-                      </p>
+                      <h3>{movie.Title}</h3>
 
-                      <p>
-                        <span>🌟</span>
-                        <span>{movie.userRating}</span>
-                      </p>
+                      <div>
+                        <p>
+                          <span>⭐</span>
+                          <span>{movie.imdbRating}</span>
+                        </p>
 
-                      <p>
-                        <span>⏳</span>
-                        <span>{movie.runtime} mins</span>
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            }
+                        <p>
+                          <span>🌟</span>
+                          <span>{movie.userRating}</span>
+                        </p>
+
+                        <p>
+                          <span>⏳</span>
+                          <span>{movie.runtime} mins</span>
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </button>
         </div>
-      </main>
+      </main >
     </>
   );
 }
