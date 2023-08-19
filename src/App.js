@@ -82,7 +82,7 @@ export default function App() {
             {isOpen1 ? "+" : "-"}
           </button>
 
-          {isOpen1 &&
+          {!isOpen1 &&
             <ul className="list">
               {tempMovieData.map(movie => (
                 <li key={movie.imdbID}>
