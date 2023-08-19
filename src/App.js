@@ -111,7 +111,27 @@ export default function App() {
           >
             {isOpen2 ? "+" : "-"}
 
-            <ul className="list"></ul>
+            {!isOpen2 &&
+              <ul className="list">
+                {tempWatchedData.map(movie => (
+                  <li key={movie.imdbID}>
+                    <img
+                      src={movie.Poster}
+                      alt={`${movie.Title} poster`}
+                    />
+
+                    <h3>{movie.Title}</h3>
+
+                    <div>
+                      <p>
+                        <span>🗓</span>
+                        <span>{movie.Year}</span>
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            }
           </button>
         </div>
       </main>
