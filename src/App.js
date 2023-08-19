@@ -59,6 +59,10 @@ export default function App() {
   const [watched, setWatched] = useState(tempWatchedData);
 
 
+  const avgImdbRating = watched.map(movie => movie.imdbRating);
+  const avgRuntime = watched.map(movie => movie.runtime);
+  const avgUserRating = watched.map(movie => movie.avgUserRating);
+
   return (
     <>
       <nav className="nav-bar">
