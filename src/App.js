@@ -139,7 +139,7 @@ export default function App() {
                 </div>
 
                 <ul className="list">
-                  {tempWatchedData.map(movie => (
+                  {watched.map(movie => (
                     <li key={movie.imdbID}>
                       <img
                         src={movie.Poster}
