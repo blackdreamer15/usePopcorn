@@ -81,6 +81,8 @@ export default function App() {
           >
             {isOpen1 ? "+" : "-"}
           </button>
+
+          <ul className="list"></ul>
         </div>
 
         <div className="box">
@@ -88,6 +90,8 @@ export default function App() {
             onClick={() => setIsOpen2(isOpen2 => !isOpen2)}
           >
             {isOpen2 ? "+" : "-"}
+
+            <ul className="list"></ul>
           </button>
         </div>
       </main>
