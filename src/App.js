@@ -56,6 +56,7 @@ export default function App() {
   const [isOpen2, setIsOpen2] = useState(true);
 
   const [movies, setMovies] = useState(tempMovieData);
+  const [watched, setWatched] = useState(tempWatchedData);
 
 
   return (
