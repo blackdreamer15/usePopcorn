@@ -86,7 +86,7 @@ export default function App() {
 
           {!isOpen1 &&
             <ul className="list">
-              {tempMovieData.map(movie => (
+              {movies.map(movie => (
                 <li key={movie.imdbID}>
                   <img
                     src={movie.Poster}
