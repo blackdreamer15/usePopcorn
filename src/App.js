@@ -64,7 +64,10 @@ export default function App() {
           <h1>usePopcorn</h1>
         </div>
 
-        <input type="text" className="search" />
+        <input type="text"
+          className="search"
+          placeholder="Search movies..."
+        />
 
         <p className="num-results">
           Found <strong>X</strong> results
