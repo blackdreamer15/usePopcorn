@@ -113,7 +113,7 @@ export default function App() {
 
             {!isOpen2 && (
               <>
-                <div></div>
+                <div className="summary"></div>
 
                 <ul className="list">
                   {tempWatchedData.map(movie => (
