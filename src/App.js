@@ -87,6 +87,7 @@ export default function App() {
         <input type="text"
           className="search"
           placeholder="Search movies..."
+          value={query}
         />
 
         <p className="num-results">
