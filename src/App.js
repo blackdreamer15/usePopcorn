@@ -112,11 +112,10 @@ function Main() {
   return (
     <main className="main">
       <div className="box">
-        <button className="btn-toggle"
-          onClick={() => setIsOpen1(isOpen1 => !isOpen1)}
-        >
+        <Button className="btn-toggle"
+          onClick={() => setIsOpen1(isOpen1 => !isOpen1)}>
           {isOpen1 ? "+" : "-"}
-        </button>
+        </Button>
 
         {!isOpen1 &&
           <ul className="list">
@@ -142,11 +141,10 @@ function Main() {
       </div>
 
       <div className="box">
-        <button className="btn-toggle"
-          onClick={() => setIsOpen2(isOpen2 => !isOpen2)}
-        >
-          {isOpen2 ? "+" : "-"}
-        </button>
+        <Button className="btn-toggle"
+          onClick={() => setIsOpen1(isOpen1 => !isOpen1)}>
+          {isOpen1 ? "+" : "-"}
+        </Button>
 
         {!isOpen2 && (
           <>
