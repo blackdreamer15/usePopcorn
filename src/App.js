@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Children, useState } from "react";
 
 const tempMovieData = [
   {
@@ -205,5 +205,14 @@ function Main() {
         )}
       </div>
     </main >
+  );
+}
+
+
+function Button({ className, onClick, children }) {
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
   );
 }
