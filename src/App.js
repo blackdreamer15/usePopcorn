@@ -78,24 +78,6 @@ export default function App() {
 
   return (
     <>
-      <nav className="nav-bar">
-        <div className="logo">
-          <span>🍿</span>
-          <h1>usePopcorn</h1>
-        </div>
-
-        <input type="text"
-          className="search"
-          placeholder="Search movies..."
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-        />
-
-        <p className="num-results">
-          Found <strong>X</strong> results
-        </p>
-      </nav>
-
       <main className="main">
         <div className="box">
           <button className="btn-toggle"
@@ -192,5 +174,28 @@ export default function App() {
         </div>
       </main >
     </>
+  );
+}
+
+
+function NavBar() {
+  return (
+    <nav className="nav-bar">
+      <div className="logo">
+        <span>🍿</span>
+        <h1>usePopcorn</h1>
+      </div>
+
+      <input type="text"
+        className="search"
+        placeholder="Search movies..."
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+      />
+
+      <p className="num-results">
+        Found <strong>X</strong> results
+      </p>
+    </nav>
   );
 }
