@@ -58,9 +58,6 @@ const average = (arr) => (
 
 
 export default function App() {
-  const [movies, setMovies] = useState(tempMovieData);
-  const [watched, setWatched] = useState(tempWatchedData);
-
   return (
     <>
       <NavBar />
@@ -99,6 +96,9 @@ function NavBar() {
 function Main() {
   const [isOpen1, setIsOpen1] = useState(true);
   const [isOpen2, setIsOpen2] = useState(true);
+
+  const [movies, setMovies] = useState(tempMovieData);
+  const [watched, setWatched] = useState(tempWatchedData);
 
   const avgImdbRating = average(
     watched.map(movie => movie.imdbRating)
