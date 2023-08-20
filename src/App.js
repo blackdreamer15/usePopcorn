@@ -88,6 +88,7 @@ export default function App() {
           className="search"
           placeholder="Search movies..."
           value={query}
+          onChange={e => setQuery(e.target.value)}
         />
 
         <p className="num-results">
