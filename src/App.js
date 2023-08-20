@@ -58,7 +58,6 @@ const average = (arr) => (
 
 
 export default function App() {
-  const [query, setQuery] = useState("");
   const [isOpen1, setIsOpen1] = useState(true);
   const [isOpen2, setIsOpen2] = useState(true);
 
@@ -179,6 +178,8 @@ export default function App() {
 
 
 function NavBar() {
+  const [query, setQuery] = useState("");
+
   return (
     <nav className="nav-bar">
       <div className="logo">
