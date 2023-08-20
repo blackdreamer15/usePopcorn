@@ -64,17 +64,6 @@ export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
 
-
-  const avgImdbRating = average(
-    watched.map(movie => movie.imdbRating)
-  );
-  const avgRuntime = average(
-    watched.map(movie => movie.runtime)
-  );
-  const avgUserRating = (
-    watched.map(movie => movie.avgUserRating)
-  );
-
   return (
     <>
       <NavBar />
@@ -111,6 +100,16 @@ function NavBar() {
 
 
 function Main() {
+  const avgImdbRating = average(
+    watched.map(movie => movie.imdbRating)
+  );
+  const avgRuntime = average(
+    watched.map(movie => movie.runtime)
+  );
+  const avgUserRating = (
+    watched.map(movie => movie.avgUserRating)
+  );
+
   return (
     <main className="main">
       <div className="box">
