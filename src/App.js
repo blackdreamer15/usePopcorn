@@ -58,6 +58,7 @@ const average = (arr) => (
 
 
 export default function App() {
+  const [query, setQuery] = useState("");
   const [isOpen1, setIsOpen1] = useState(true);
   const [isOpen2, setIsOpen2] = useState(true);
 
