@@ -214,3 +214,10 @@ function Button({ className, onClick, children }) {
     </button>
   );
 }
+
+
+function MovieList() {
+  return (
+    
+  );
+}
