@@ -49,6 +49,7 @@ const tempWatchedData = [
 ];
 
 
+const average = () => { };
 
 
 export default function App() {
@@ -59,9 +60,15 @@ export default function App() {
   const [watched, setWatched] = useState(tempWatchedData);
 
 
-  const avgImdbRating = watched.map(movie => movie.imdbRating);
-  const avgRuntime = watched.map(movie => movie.runtime);
-  const avgUserRating = watched.map(movie => movie.avgUserRating);
+  const avgImdbRating = average(
+    watched.map(movie => movie.imdbRating)
+  );
+  const avgRuntime = average(
+    watched.map(movie => movie.runtime)
+  );
+  const avgUserRating = (
+    watched.map(movie => movie.avgUserRating)
+  );
 
   return (
     <>
