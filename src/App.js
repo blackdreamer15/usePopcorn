@@ -130,7 +130,6 @@ function Button({ className, onClick, children }) {
 
 function ListBox() {
   const [isOpen1, setIsOpen1] = useState(true);
-  const [movies, setMovies] = useState(tempMovieData);
 
   return (
     <div className="box">
@@ -139,12 +138,14 @@ function ListBox() {
         {isOpen1 ? "+" : "-"}
       </Button>
 
-      {!isOpen1 && <MovieList movies={movies} />}
+      {!isOpen1 && <MovieList />}
     </div>
   );
 }
 
-function MovieList({ movies }) {
+function MovieList() {
+  const [movies, setMovies] = useState(tempMovieData);
+
   return (
     <ul className="list">
       {movies.map(movie => (
