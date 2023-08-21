@@ -182,8 +182,8 @@ function WatchedBox() {
   return (
     <div className="box">
       <Button className="btn-toggle"
-        onClick={() => setIsOpen1(isOpen1 => !isOpen1)}>
-        {isOpen1 ? "+" : "-"}
+        onClick={() => setIsOpen2(isOpen2 => !isOpen2)}>
+        {isOpen2 ? "+" : "-"}
       </Button>
 
       {!isOpen2 && (
