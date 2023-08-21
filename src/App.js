@@ -139,12 +139,12 @@ function ListBox() {
         {isOpen1 ? "+" : "-"}
       </Button>
 
-      {!isOpen1 && <MovieList />}
+      {!isOpen1 && <MovieList movies={movies} />}
     </div>
   );
 }
 
-function MovieList() {
+function MovieList({ movies }) {
   return (
     <ul className="list">
       {movies.map(movie => (
