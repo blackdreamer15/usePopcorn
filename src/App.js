@@ -68,18 +68,11 @@ export default function App() {
 
 
 function NavBar() {
-  const [query, setQuery] = useState("");
-
   return (
     <nav className="nav-bar">
       <Logo />
 
-      <input type="text"
-        className="search"
-        placeholder="Search movies..."
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-      />
+      <Search />
 
       <p className="num-results">
         Found <strong>X</strong> results
@@ -94,6 +87,18 @@ function Logo() {
       <span>🍿</span>
       <h1>usePopcorn</h1>
     </div>
+  );
+}
+
+function Search() {
+  const [query, setQuery] = useState("");
+  return (
+    <input type="text"
+      className="search"
+      placeholder="Search movies..."
+      value={query}
+      onChange={e => setQuery(e.target.value)}
+    />
   );
 }
 
