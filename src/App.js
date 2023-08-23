@@ -189,7 +189,7 @@ function WatchedBox() {
 
       {!isOpen2 && (
         <>
-          <WatchedSummary />
+          <WatchedSummary watched={watched} />
           <WatchedMovieList />
         </>
       )}
@@ -197,7 +197,7 @@ function WatchedBox() {
   );
 }
 
-function WatchedSummary() {
+function WatchedSummary({ watched }) {
   const avgImdbRating = average(
     watched.map(movie => movie.imdbRating)
   );
