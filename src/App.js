@@ -180,16 +180,6 @@ function WatchedBox() {
   const [isOpen2, setIsOpen2] = useState(true);
   const [watched, setWatched] = useState(tempWatchedData);
 
-  const avgImdbRating = average(
-    watched.map(movie => movie.imdbRating)
-  );
-  const avgRuntime = average(
-    watched.map(movie => movie.runtime)
-  );
-  const avgUserRating = (
-    watched.map(movie => movie.avgUserRating)
-  );
-
   return (
     <div className="box">
       <Button className="btn-toggle"
@@ -208,6 +198,16 @@ function WatchedBox() {
 }
 
 function WatchedSummary() {
+  const avgImdbRating = average(
+    watched.map(movie => movie.imdbRating)
+  );
+  const avgRuntime = average(
+    watched.map(movie => movie.runtime)
+  );
+  const avgUserRating = (
+    watched.map(movie => movie.avgUserRating)
+  );
+
   return (
     <div className="summary">
       <h2>Movies you watched</h2>
