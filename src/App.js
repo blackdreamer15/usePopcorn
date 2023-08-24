@@ -62,19 +62,22 @@ export default function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar>
+        <Logo />
+        <Search />
+        <NumResults movies={movies} />
+      </NavBar>
+
       <Main />
     </>
   );
 }
 
 
-function NavBar() {
+function NavBar({ children }) {
   return (
     <nav className="nav-bar">
-      <Logo />
-      <Search />
-      <NumResults />
+      {children}
     </nav>
   );
 }
