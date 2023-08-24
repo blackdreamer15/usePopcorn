@@ -5,6 +5,7 @@ export default function StarRating() {
                 {Array.from({ length: 10 }, (_, i) => (
                     <span>S{i + 1}</span>
                 ))}
+                <p>10</p>
             </div>
         </div>
     );
