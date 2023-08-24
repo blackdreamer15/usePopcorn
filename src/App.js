@@ -70,13 +70,13 @@ export default function App() {
       </NavBar>
 
       <Main>
-        <ListBox>
+        <Box>
           <MovieList movies={movies} />
-        </ListBox>
-        <WatchedBox>
+        </Box>
+        <Box>
           <WatchedSummary watched={watched} />
           <WatchedMovieList watched={watched} />
-        </WatchedBox>
+        </Box>
       </Main>
     </>
   );
@@ -183,26 +183,6 @@ function Movie({ movie }) {
         </p>
       </div>
     </li>
-  );
-}
-
-
-function WatchedBox({ children }) {
-  const [isOpen2, setIsOpen2] = useState(true);
-
-  return (
-    <div className="box">
-      <Button className="btn-toggle"
-        onClick={() => setIsOpen2(isOpen2 => !isOpen2)}>
-        {isOpen2 ? "+" : "-"}
-      </Button>
-
-      {!isOpen2 && (
-        <>
-          {children}
-        </>
-      )}
-    </div>
   );
 }
 
