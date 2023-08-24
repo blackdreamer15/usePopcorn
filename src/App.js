@@ -190,7 +190,7 @@ function WatchedBox() {
       {!isOpen2 && (
         <>
           <WatchedSummary watched={watched} />
-          <WatchedMovieList />
+          <WatchedMovieList watched={watched} />
         </>
       )}
     </div>
@@ -233,7 +233,7 @@ function WatchedSummary({ watched }) {
   );
 }
 
-function WatchedMovieList() {
+function WatchedMovieList({ watched }) {
   return (
     <ul className="list">
       {watched.map(movie => (
