@@ -141,17 +141,17 @@ function Button({ className, onClick, children }) {
 }
 
 
-function ListBox({ children }) {
-  const [isOpen1, setIsOpen1] = useState(true);
+function Box({ children }) {
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="box">
       <Button className="btn-toggle"
-        onClick={() => setIsOpen1(isOpen1 => !isOpen1)}>
-        {isOpen1 ? "+" : "-"}
+        onClick={() => setIsOpen(isOpen => !isOpen)}>
+        {isOpen ? "+" : "-"}
       </Button>
 
-      {!isOpen1 && children}
+      {!isOpen && children}
     </div>
   );
 }
