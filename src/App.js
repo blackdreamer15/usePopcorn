@@ -58,6 +58,8 @@ const average = (arr) => (
 
 
 export default function App() {
+  const [movies, setMovies] = useState(tempMovieData);
+
   return (
     <>
       <NavBar />
@@ -144,8 +146,6 @@ function ListBox() {
 }
 
 function MovieList() {
-  const [movies, setMovies] = useState(tempMovieData);
-
   return (
     <ul className="list">
       {movies.map(movie => (
