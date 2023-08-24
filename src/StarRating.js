@@ -1,6 +1,12 @@
 export default function StarRating() {
     return (
-        <p>Good</p>
+        <div>
+            <div>
+                {Array.from({ length: 10 }, (_, i) => (
+                    <span>S{i + 1}</span>
+                ))}
+            </div>
+        </div>
     );
 }
 
