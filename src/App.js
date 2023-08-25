@@ -64,7 +64,11 @@ export default function App() {
 
   useEffect(
     function () {
+      async function fetchMovies() {
+        fetch(`http://www.omdbapi.com/?apikey=${KEY}&s={}`);
+      }
 
+      fetchMovies();
     }, []
   );
 
