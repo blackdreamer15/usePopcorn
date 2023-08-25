@@ -61,6 +61,7 @@ const average = (arr) => (
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(
     function () {
