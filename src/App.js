@@ -99,6 +99,10 @@ export default function App() {
   );
 }
 
+function Loader() {
+  return (<p className="loader">Loading...</p>);
+}
+
 
 function NavBar({ children }) {
   return (
