@@ -48,9 +48,7 @@ const tempWatchedData = [
   },
 ];
 
-
-
-// http://www.omdbapi.com/?i=tt3896198&apikey=a368daec
+const KEY = 'a368daec';
 
 const average = (arr) => (
   arr.reduce((acc, curr, i, arr) => {
