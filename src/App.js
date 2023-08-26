@@ -70,7 +70,7 @@ export default function App() {
           setIsLoading(true);
 
           const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s={}`);
-          const data = res.json();
+          const data = await res.json();
 
           setMovies(data.Search);
 
