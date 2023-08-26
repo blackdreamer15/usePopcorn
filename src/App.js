@@ -65,8 +65,8 @@ export default function App() {
 
   useEffect(
     function () {
-      try {
-        async function fetchMovies() {
+      async function fetchMovies() {
+        try {
           setIsLoading(true);
           const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s={}`);
 
@@ -76,16 +76,15 @@ export default function App() {
           const data = await res.json();
           setMovies(data.Search);
         }
-
-        fetchMovies();
-      }
-      catch (err) {
-        console.error(err.message);
-      }
-      finally {
-        setIsLoading(false);
+        catch (err) {
+          console.error(err.message);
+        }
+        finally {
+          setIsLoading(false);
+        }
       }
 
+      fetchMovies();
 
     }, []
   );
