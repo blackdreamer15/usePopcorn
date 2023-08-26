@@ -68,13 +68,12 @@ export default function App() {
       try {
         async function fetchMovies() {
           setIsLoading(true);
-
           const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s={}`);
 
-          if (!res.ok) throw new Error("Something went wrong with fetching movies.");
+          if (!res.ok)
+            throw new Error("Something went wrong with fetching movies.");
 
           const data = await res.json();
-
           setMovies(data.Search);
         }
 
