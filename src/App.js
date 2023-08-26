@@ -186,7 +186,7 @@ function Button({ className, onClick, children }) {
 
 
 function Box({ children }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="box">
