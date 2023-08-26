@@ -148,7 +148,7 @@ function Logo() {
   );
 }
 
-function Search() {
+function Search({ query, setQuery }) {
   return (
     <input type="text"
       className="search"
