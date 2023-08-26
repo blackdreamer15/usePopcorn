@@ -83,7 +83,7 @@ export default function App() {
         fetchMovies();
       }
       catch (err) {
-
+        console.error(err.message);
       }
 
 
