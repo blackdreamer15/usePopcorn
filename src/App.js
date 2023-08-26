@@ -102,8 +102,8 @@ export default function App() {
       <Main>
         <Box>
           {isLoading && <Loader />}
+          {!isLoading && !error && <MovieList movies={movies} />}
           {error && <ErrorMessage message={error} />}
-          {/* {isLoading ? <Loader /> : <MovieList movies={movies} />} */}
         </Box>
         <Box>
           <WatchedSummary watched={watched} />
