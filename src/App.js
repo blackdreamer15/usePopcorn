@@ -76,14 +76,15 @@ export default function App() {
           const data = await res.json();
 
           setMovies(data.Search);
-
-          setIsLoading(false);
         }
 
         fetchMovies();
       }
       catch (err) {
         console.error(err.message);
+      }
+      finally {
+        setIsLoading(false);
       }
 
 
