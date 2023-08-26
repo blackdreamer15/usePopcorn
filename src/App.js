@@ -63,6 +63,7 @@ export default function App() {
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [query, setQuery] = useState("");
 
   useEffect(
     function () {
@@ -148,7 +149,6 @@ function Logo() {
 }
 
 function Search() {
-  const [query, setQuery] = useState("");
   return (
     <input type="text"
       className="search"
