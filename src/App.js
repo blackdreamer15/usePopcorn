@@ -242,7 +242,7 @@ function Movie({ movie }) {
 
 function selectedMovie({ selectedId }) {
   return (
-    
+    <div className="details">{selectedId}</div>
   );
 }
 
