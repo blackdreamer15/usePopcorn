@@ -122,7 +122,7 @@ export default function App() {
         </Box>
         <Box>
           <WatchedSummary watched={watched} />
-          <WatchedMovieList watched={watched} id={selectedId} />
+          <WatchedMovieList watched={watched} />
         </Box>
       </Main>
     </>
