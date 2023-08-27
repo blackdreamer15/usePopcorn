@@ -91,6 +91,11 @@ export default function App() {
         }
       }
 
+      if (!query.length) {
+        setMovies([]);
+        setError("");
+        return;
+      }
       fetchMovies();
 
     }, [query]
