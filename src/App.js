@@ -121,8 +121,14 @@ export default function App() {
           {error && <ErrorMessage message={error} />}
         </Box>
         <Box>
-          <WatchedSummary watched={watched} />
-          <WatchedMovieList watched={watched} />
+          {selectedId ?
+            <MovieDetails selectedId={selectedId} />
+            :
+            <>
+              <WatchedSummary watched={watched} />
+              <WatchedMovieList watched={watched} />
+            </>
+          }
         </Box>
       </Main>
     </>
