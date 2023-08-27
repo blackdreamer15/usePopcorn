@@ -224,7 +224,7 @@ function MovieList({ movies, onSelectMovie }) {
   );
 }
 
-function Movie({ movie }) {
+function Movie({ movie, onSelectMovie }) {
   return (
     <li onClick={ }>
       <img
