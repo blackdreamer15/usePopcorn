@@ -64,7 +64,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState("tt0816692");
 
   useEffect(
     function () {
@@ -118,7 +118,7 @@ export default function App() {
         </Box>
         <Box>
           <WatchedSummary watched={watched} />
-          <WatchedMovieList watched={watched} />
+          <WatchedMovieList watched={watched} id={selectedId} />
         </Box>
       </Main>
     </>
@@ -222,7 +222,7 @@ function MovieList({ movies }) {
 
 function Movie({ movie }) {
   return (
-    <li>
+    <li className="">
       <img
         src={movie.Poster}
         alt={`${movie.Title} poster`}
@@ -237,6 +237,12 @@ function Movie({ movie }) {
         </p>
       </div>
     </li>
+  );
+}
+
+function selectedMovie({ selectedId }) {
+  return (
+    
   );
 }
 
