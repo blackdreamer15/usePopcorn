@@ -226,7 +226,7 @@ function MovieList({ movies, onSelectMovie }) {
 
 function Movie({ movie, onSelectMovie }) {
   return (
-    <li onClick={ }>
+    <li onClick={() => onSelectMovie(movie.imdbID)}>
       <img
         src={movie.Poster}
         alt={`${movie.Title} poster`}
