@@ -66,6 +66,10 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState("tt0816692");
 
+  function handleSelectMovie(id) {
+    selectedId(id);
+  }
+
   useEffect(
     function () {
       async function fetchMovies() {
@@ -222,7 +226,7 @@ function MovieList({ movies }) {
 
 function Movie({ movie }) {
   return (
-    <li className="">
+    <li onClick={ }>
       <img
         src={movie.Poster}
         alt={`${movie.Title} poster`}
