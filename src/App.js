@@ -67,7 +67,7 @@ export default function App() {
   const [selectedId, setSelectedId] = useState("tt0816692");
 
   function handleSelectMovie(id) {
-    selectedId(id);
+    setSelectedId(id);
   }
 
   useEffect(
