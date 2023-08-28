@@ -77,6 +77,10 @@ export default function App() {
     setSelectedId(null);
   }
 
+  function handleAddMovie() {
+
+  }
+
   useEffect(
     function () {
       async function fetchMovies() {
@@ -124,7 +128,13 @@ export default function App() {
       <Main>
         <Box>
           {isLoading && <Loader />}
-          {!isLoading && !error && <MovieList movies={movies} onSelectMovie={handleSelectMovie} />}
+          {!isLoading && !error &&
+            <MovieList
+              movies={movies}
+              onSelectMovie={handleSelectMovie}
+              onAddMovie={handleAddMovie}
+            />
+          }
           {error && <ErrorMessage message={error} />}
         </Box>
         <Box>
