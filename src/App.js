@@ -257,7 +257,7 @@ function Movie({ movie, onSelectMovie }) {
   );
 }
 
-function MovieDetails({ selectedId, onCloseMovie }) {
+function MovieDetails({ selectedId, onCloseMovie, onAddMovie }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -321,7 +321,7 @@ function MovieDetails({ selectedId, onCloseMovie }) {
             </header>
 
             <section>
-              <button className="btn-add">+ Add to list</button>
+              <button className="btn-add" onClick={onAddMovie}>+ Add to list</button>
 
               <div className="rating">
                 <StarRating maxRating={10} size={24} />
