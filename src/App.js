@@ -290,7 +290,7 @@ function MovieDetails({ selectedId, onCloseMovie }) {
 
       getMovieDetails(selectedId);
 
-    }, []);
+    }, [selectedId]);
 
   return (
     <div className="details">
