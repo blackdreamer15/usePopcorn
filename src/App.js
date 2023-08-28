@@ -77,6 +77,9 @@ export default function App() {
     setSelectedId(null);
   }
 
+  function handleAddWatched(movie) {
+    setWatched(watched => [...watched, movie]);
+  }
 
   useEffect(
     function () {
@@ -263,7 +266,7 @@ function Movie({ movie, onSelectMovie }) {
   );
 }
 
-function MovieDetails({ selectedId, onCloseMovie, onAddMovie }) {
+function MovieDetails({ selectedId, onCloseMovie }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
