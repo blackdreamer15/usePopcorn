@@ -321,6 +321,8 @@ function MovieDetails({ selectedId, onCloseMovie }) {
             </header>
 
             <section>
+              <button className="btn-add">+ Add to list</button>
+
               <div className="rating">
                 <StarRating maxRating={10} size={24} />
               </div>
