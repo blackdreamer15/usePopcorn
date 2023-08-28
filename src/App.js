@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import StarRating from "./StarRating";
 
 const tempMovieData = [
   {
@@ -310,6 +311,8 @@ function MovieDetails({ selectedId, onCloseMovie }) {
       </header>
 
       <section>
+        <StarRating />
+
         <p><em>{plot}</em></p>
         <p>Starring {actors}</p>
         <p>Directed by {director}</p>
