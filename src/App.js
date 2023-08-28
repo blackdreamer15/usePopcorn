@@ -278,14 +278,18 @@ function MovieDetails({ selectedId, onCloseMovie }) {
     function () {
       async function getMovieDetails() {
         try {
-          console.log(selectedId);
+          setIsLoading(true);
           const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`);
           const data = await res.json();
 
           setMovie(data);
 
-        } catch (error) {
+        }
+        catch (error) {
           console.error(error);
+        }
+        finally {
+          setIsLoading(false);
         }
       }
 
