@@ -132,6 +132,7 @@ export default function App() {
             <MovieList
               movies={movies}
               onSelectMovie={handleSelectMovie}
+              onAddWatched={handleAddWatched}
             />
           }
           {error && <ErrorMessage message={error} />}
@@ -266,7 +267,7 @@ function Movie({ movie, onSelectMovie }) {
   );
 }
 
-function MovieDetails({ selectedId, onCloseMovie }) {
+function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
