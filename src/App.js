@@ -338,7 +338,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
             </header>
 
             <section>
-              <button className="btn-add" onClick={onAddMovie}>+ Add to list</button>
+              <button className="btn-add" onClick={handleAddMovie}>+ Add to list</button>
 
               <div className="rating">
                 <StarRating maxRating={10} size={24} />
