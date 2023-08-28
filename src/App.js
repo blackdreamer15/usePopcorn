@@ -287,6 +287,16 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
 
   function handleAddMovie() {
 
+    const newlyWatched = {
+      title,
+      year,
+      poster,
+      runtime,
+      imdbID: selectedId,
+      imdbRating: imdbRating,
+    };
+
+    onAddWatched(newlyWatched);
   }
 
 
