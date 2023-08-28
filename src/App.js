@@ -77,9 +77,6 @@ export default function App() {
     setSelectedId(null);
   }
 
-  function handleAddMovie() {
-
-  }
 
   useEffect(
     function () {
@@ -132,7 +129,6 @@ export default function App() {
             <MovieList
               movies={movies}
               onSelectMovie={handleSelectMovie}
-              onAddMovie={handleAddMovie}
             />
           }
           {error && <ErrorMessage message={error} />}
@@ -283,6 +279,13 @@ function MovieDetails({ selectedId, onCloseMovie, onAddMovie }) {
     Director: director,
     Genre: genre,
   } = movie;
+
+
+  function handleAddMovie() {
+
+  }
+
+
 
   useEffect(
     function () {
