@@ -295,31 +295,38 @@ function MovieDetails({ selectedId, onCloseMovie }) {
 
   return (
     <div className="details">
-      <header>
-        <button className="btn-back" onClick={onCloseMovie}>&larr;</button>
+      {
+        isLoading ?
+          <Loader />
+          :
+          <>
+            <header>
+              <button className="btn-back" onClick={onCloseMovie}>&larr;</button>
 
-        <img src={poster} alt={`Poster of ${movie}`} />
+              <img src={poster} alt={`Poster of ${movie}`} />
 
-        <div className="details-overview">
-          <h2>{title}</h2>
-          <p>{released} &bull; {runtime}</p>
-          <p>{genre}</p>
-          <p>
-            <span>⭐️</span>
-            <span>{imdbRating} Imdb rating</span>
-          </p>
-        </div>
-      </header>
+              <div className="details-overview">
+                <h2>{title}</h2>
+                <p>{released} &bull; {runtime}</p>
+                <p>{genre}</p>
+                <p>
+                  <span>⭐️</span>
+                  <span>{imdbRating} Imdb rating</span>
+                </p>
+              </div>
+            </header>
 
-      <section>
-        <div className="rating">
-          <StarRating maxRating={10} size={24} />
-        </div>
+            <section>
+              <div className="rating">
+                <StarRating maxRating={10} size={24} />
+              </div>
 
-        <p><em>{plot}</em></p>
-        <p>Starring {actors}</p>
-        <p>Directed by {director}</p>
-      </section>
+              <p><em>{plot}</em></p>
+              <p>Starring {actors}</p>
+              <p>Directed by {director}</p>
+            </section>
+          </>
+      }
     </div>
   );
 }
