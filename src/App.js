@@ -293,7 +293,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
       poster,
       runtime,
       imdbID: selectedId,
-      imdbRating: imdbRating,
+      imdbRating: Number(imdbRating),
     };
 
     onAddWatched(newlyWatched);
