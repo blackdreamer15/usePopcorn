@@ -252,6 +252,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
     };
 
     onAddWatched(newlyWatched);
+    onCloseMovie();
   }
 
 
