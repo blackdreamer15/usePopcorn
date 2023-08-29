@@ -85,14 +85,16 @@ export default function App() {
             <MovieList
               movies={movies}
               onSelectMovie={handleSelectMovie}
-              onAddWatched={handleAddWatched}
             />
           }
           {error && <ErrorMessage message={error} />}
         </Box>
         <Box>
           {selectedId ?
-            <MovieDetails selectedId={selectedId} onCloseMovie={handleCloseMovie} />
+            <MovieDetails selectedId={selectedId}
+              onCloseMovie={handleCloseMovie}
+              onAddWatched={handleAddWatched}
+            />
             :
             <>
               <WatchedSummary watched={watched} />
