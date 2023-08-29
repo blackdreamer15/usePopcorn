@@ -250,6 +250,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
       runtime: Number(runtime.split(' ')[0]),
       imdbID: selectedId,
       imdbRating: Number(imdbRating),
+      userRating,
     };
 
     onAddWatched(newlyWatched);
