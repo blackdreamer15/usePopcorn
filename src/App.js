@@ -6,8 +6,7 @@ const KEY = 'a368daec';
 
 const average = (arr) => (
   arr.reduce((acc, curr, i, arr) => {
-    acc += curr;
-    return acc / arr.length;
+    return acc + curr / arr.length;
   }, 0)
 );
 
@@ -401,17 +400,17 @@ function WatchedMovie({ movie, onDeleteWatched }) {
       <div>
         <p>
           <span>⭐</span>
-          <span>{movie.imdbRating}</span>
+          <span>{movie.imdbRating.toFixed(2)}</span>
         </p>
 
         <p>
           <span>🌟</span>
-          <span>{movie.userRating}</span>
+          <span>{movie.userRating.toFixed(2)}</span>
         </p>
 
         <p>
           <span>⏳</span>
-          <span>{movie.runtime} mins</span>
+          <span>{movie.runtime.toFixed(2)} mins</span>
         </p>
       </div>
 
