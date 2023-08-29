@@ -94,6 +94,7 @@ export default function App() {
             <MovieDetails selectedId={selectedId}
               onCloseMovie={handleCloseMovie}
               onAddWatched={handleAddWatched}
+              watched={watched}
             />
             :
             <>
@@ -222,10 +223,13 @@ function Movie({ movie, onSelectMovie }) {
   );
 }
 
-function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
+function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
+
+
+  const isWatched = watched.map(movie => movie.imdbID).includes(selectedId);
 
   const {
     Title: title,
@@ -253,7 +257,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
       userRating,
     };
 
-    onAddWatched(newlyWatched);
+    if (!isWatched) onAddWatched(newlyWatched);
+
     onCloseMovie();
   }
 
@@ -307,11 +312,17 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
 
             <section>
               <div className="rating">
-                <StarRating maxRating={10} size={24} onSetRating={setUserRating} />
+                {isWatched ?
+                  <p>This movie has been added to watched list already.</p>
+                  :
+                  <>
+                    <StarRating maxRating={10} size={24} onSetRating={setUserRating} />
 
-                {userRating > 0 && (
-                  <button className="btn-add" onClick={handleAddMovie}>+ Add to list</button>
-                )}
+                    {userRating > 0 && (
+                      <button className="btn-add" onClick={handleAddMovie}>+ Add to list</button>
+                    )}
+                  </>
+                }
               </div>
 
               <p><em>{plot}</em></p>
