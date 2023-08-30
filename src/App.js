@@ -5,9 +5,7 @@ import StarRating from "./StarRating";
 const KEY = 'a368daec';
 
 const average = (arr) => (
-  arr.reduce((acc, curr, i, arr) => {
-    return acc + curr / arr.length;
-  }, 0)
+  arr.reduce((acc, curr, i, arr) => (acc += curr), 0) / arr.length
 );
 
 
@@ -263,7 +261,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       userRating,
     };
 
-    if (!isWatched) onAddWatched(newlyWatched);
+    onAddWatched(newlyWatched);
 
     onCloseMovie();
   }
@@ -348,9 +346,11 @@ function WatchedSummary({ watched }) {
   const avgRuntime = average(
     watched.map(movie => movie.runtime)
   );
-  const avgUserRating = (
-    watched.map(movie => movie.avgUserRating)
+  const avgUserRating = average(
+    watched.map(movie => movie.userRating)
   );
+
+
 
   return (
     <div className="summary">
@@ -362,15 +362,15 @@ function WatchedSummary({ watched }) {
         </p>
         <p>
           <span>⭐️</span>
-          <span>{avgImdbRating}</span>
+          <span>{avgImdbRating.toFixed(2)}</span>
         </p>
         <p>
           <span>🌟</span>
-          <span>{avgUserRating}</span>
+          <span>{avgUserRating.toFixed(2)}</span>
         </p>
         <p>
           <span>⏳</span>
-          <span>{avgRuntime} min</span>
+          <span>{avgRuntime.toFixed(0)} min</span>
         </p>
       </div>
     </div>
@@ -400,17 +400,17 @@ function WatchedMovie({ movie, onDeleteWatched }) {
       <div>
         <p>
           <span>⭐</span>
-          <span>{movie.imdbRating.toFixed(2)}</span>
+          <span>{movie.imdbRating}</span>
         </p>
 
         <p>
           <span>🌟</span>
-          <span>{movie.userRating.toFixed(2)}</span>
+          <span>{movie.userRating}</span>
         </p>
 
         <p>
           <span>⏳</span>
-          <span>{movie.runtime.toFixed(2)} mins</span>
+          <span>{movie.runtime} mins</span>
         </p>
       </div>
 
