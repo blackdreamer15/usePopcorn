@@ -83,6 +83,7 @@ export default function App() {
     }, [query]
   );
 
+
   return (
     <>
       <NavBar>
@@ -314,6 +315,25 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     },
     [title]
   );
+
+
+  useEffect(
+    function () {
+      function callback(event) {
+        if (event.code === "Escape") {
+          onCloseMovie();
+          console.log("close");
+        }
+      }
+
+      document.addEventListener('keydown', callback);
+
+      return function () {
+        document.removeEventListener("keydown", callback)
+      }
+    }, [onCloseMovie]
+  );
+
 
 
   return (
