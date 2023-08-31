@@ -43,8 +43,9 @@ export default function App() {
 
       async function fetchMovies() {
         try {
-          setError("");
           setIsLoading(true);
+          setError("");
+
           const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
@@ -60,10 +61,10 @@ export default function App() {
           setError("");
         }
         catch (err) {
-          console.error(err.message);
-
-          if (error.name !== "AbortError")
+          if (err.name !== "AbortError") {
+            console.log(err.message);
             setError(err.message);
+          }
         }
         finally {
           setIsLoading(false);
@@ -322,7 +323,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       function callback(event) {
         if (event.code === "Escape") {
           onCloseMovie();
-          console.log("close");
         }
       }
 
