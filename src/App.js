@@ -235,6 +235,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const isWatched = watched.map(movie => movie.imdbID).includes(selectedId);
   const watchedUserRating = watched.find(movie => movie.imdbID === selectedId)?.userRating;
 
+
   const {
     Title: title,
     Year: year,
@@ -290,6 +291,20 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       getMovieDetails(selectedId);
 
     }, [selectedId]);
+
+
+  useEffect(
+    function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+
+      return function cleanUp() {
+        document.title = "usePopcorn";
+      }
+    },
+    [title]
+  );
+
 
   return (
     <div className="details">
@@ -362,15 +377,15 @@ function WatchedSummary({ watched }) {
         </p>
         <p>
           <span>⭐️</span>
-          <span>{avgImdbRating.toFixed(2)}</span>
+          <span>{avgImdbRating ? avgImdbRating.toFixed(2) : 0.00}</span>
         </p>
         <p>
           <span>🌟</span>
-          <span>{avgUserRating.toFixed(2)}</span>
+          <span>{avgUserRating ? avgUserRating.toFixed(2) : 0.00}</span>
         </p>
         <p>
           <span>⏳</span>
-          <span>{avgRuntime.toFixed(0)} min</span>
+          <span>{avgRuntime ? avgRuntime.toFixed(0) : 0.00} min</span>
         </p>
       </div>
     </div>
