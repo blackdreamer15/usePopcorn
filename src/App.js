@@ -17,8 +17,8 @@ export default function App() {
   const [selectedId, setSelectedId] = useState(null);
 
   const [watched, setWatched] = useState(() => {
-    const savedValue = localStorage.getItem("watchedMovies");
-    return JSON.parse(savedValue);
+    const savedValue = localStorage.getItem("watched");
+    return JSON.parse(savedValue) || [];
   });
 
 
@@ -41,6 +41,14 @@ export default function App() {
       movie.imdbID !== id
     )))
   }
+
+  useEffect(
+    function () {
+      localStorage.setItem("watched", JSON.stringify(watched));
+
+    }, [watched]
+  );
+
 
   useEffect(
     function () {
@@ -285,14 +293,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
     onCloseMovie();
   }
-
-
-  useEffect(
-    function () {
-      localStorage.setItem("watchedMovies", JSON.stringify(watched));
-
-    }, [watched]
-  );
 
 
   useEffect(
