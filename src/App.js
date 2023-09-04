@@ -282,6 +282,13 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   }
 
 
+  useEffect(
+    function () {
+      localStorage.setItem("watchedMovies", JSON.stringify(watched));
+
+    }, [watched]
+  );
+
 
   useEffect(
     function () {
