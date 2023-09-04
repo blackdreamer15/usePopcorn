@@ -174,7 +174,8 @@ function Search({ query, setQuery }) {
   useEffect(function () {
 
     function callback(e) {
-      inputEl.current.focus();
+      if (e.code === "Enter")
+        inputEl.current.focus();
     }
     document.addEventListener("keydown", callback);
 
