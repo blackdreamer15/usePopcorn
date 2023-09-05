@@ -306,6 +306,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       imdbID: selectedId,
       imdbRating: Number(imdbRating),
       userRating,
+      numOfRatingDecisions: countRef.current,
     };
 
     onAddWatched(newlyWatched);
