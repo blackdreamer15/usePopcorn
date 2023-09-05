@@ -19,6 +19,8 @@ export default function App() {
     return JSON.parse(savedValue) || [];
   });
 
+  const { } = useMovies();
+
 
   function handleSelectMovie(id) {
     setSelectedId(selectedId => (
