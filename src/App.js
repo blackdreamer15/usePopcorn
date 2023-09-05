@@ -174,14 +174,16 @@ function Search({ query, setQuery }) {
   useEffect(function () {
 
     function callback(e) {
-      if (e.code === "Enter")
+      if (e.code === "Enter") {
         inputEl.current.focus();
+        setQuery("");
+      }
     }
     document.addEventListener("keydown", callback);
 
     return () => document.addEventListener("keydown", callback);
 
-  }, []);
+  }, [setQuery]);
 
 
   return (
