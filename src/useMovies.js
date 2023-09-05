@@ -53,4 +53,6 @@ export function useMovies(query) {
             }
         }, [query]
     );
+
+    return { isLoading, error, movies };
 }
