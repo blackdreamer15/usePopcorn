@@ -316,6 +316,15 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
   useEffect(
     function () {
+      if (userRating)
+        return countRef.current++;
+    },
+    [userRating]
+  );
+
+
+  useEffect(
+    function () {
       async function getMovieDetails() {
         try {
           setIsLoading(true);
