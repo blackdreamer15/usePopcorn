@@ -19,7 +19,7 @@ export default function App() {
     return JSON.parse(savedValue) || [];
   });
 
-  const { } = useMovies(query);
+  const { isLoading, error, movies } = useMovies(query);
 
 
   function handleSelectMovie(id) {
