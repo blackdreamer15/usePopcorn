@@ -17,6 +17,8 @@ export default function App() {
 
   const { isLoading, error, movies } = useMovies(query);
 
+  const { } = useLocalStorage();
+
 
   function handleSelectMovie(id) {
     setSelectedId(selectedId => (
