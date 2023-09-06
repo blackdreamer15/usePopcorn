@@ -17,7 +17,7 @@ export default function App() {
 
   const { isLoading, error, movies } = useMovies(query);
 
-  const { } = useLocalStorage();
+  const { watched, setWatched } = useLocalStorage();
 
 
   function handleSelectMovie(id) {
