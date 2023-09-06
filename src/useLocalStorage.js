@@ -13,4 +13,6 @@ export function useLocalStorage() {
 
         }, [watched]
     );
+
+    return { watched, setWatched };
 }
