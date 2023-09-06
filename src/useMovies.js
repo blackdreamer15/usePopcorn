@@ -5,6 +5,10 @@ export function useMovies(query) {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
 
+
+    const KEY = 'a368daec';
+
+
     useEffect(
         function () {
             const controller = new AbortController();
