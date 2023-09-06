@@ -14,5 +14,5 @@ export function useLocalStorage() {
         }, [watched]
     );
 
-    return { watched, setWatched };
+    return [watched, setWatched];
 }
