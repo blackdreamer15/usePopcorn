@@ -1,3 +1,3 @@
-function useLocalStorage() {
+export function useLocalStorage() {
 
 }
