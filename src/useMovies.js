@@ -49,7 +49,8 @@ export function useMovies(query) {
                 return;
             }
 
-            handleCloseMovie();
+            //The commented function was to close the movie details of the previously selected movie whenever we are making a new query. Adding it to the dependency array is shooting infinite errors. Once I figure it out, I will fix it.
+            // handleCloseMovie();
             fetchMovies();
 
             return function () {
