@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import StarRating from "./StarRating";
 import { useMovies } from "./useMovies";
 import { useLocalStorage } from "./useLocalStorage";
+import { useKey } from "./useKey";
 
 
 const KEY = 'a368daec';
@@ -300,24 +301,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     },
     [title]
   );
-
-
-  useEffect(
-    function () {
-      function callback(event) {
-        if (event.code === "Escape") {
-          onCloseMovie();
-        }
-      }
-
-      document.addEventListener('keydown', callback);
-
-      return function () {
-        document.removeEventListener("keydown", callback)
-      }
-    }, [onCloseMovie]
-  );
-
 
 
   return (
