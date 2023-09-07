@@ -12,7 +12,7 @@ export function useLocalStorage(initialValue, key) {
             localStorage.setItem(key, JSON.stringify(value));
 
         },
-        [value]
+        [key, value]
     );
 
     return [value, setValue];
