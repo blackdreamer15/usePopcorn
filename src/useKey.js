@@ -4,7 +4,7 @@ export function useKey(keyPressed, actionToPerform) {
     useEffect(
         function () {
             function callback(event) {
-                if (event.code === keyPressed) {
+                if (event.code.toLowerCase() === keyPressed.toLowerCase()) {
                     actionToPerform();
                 }
             }
