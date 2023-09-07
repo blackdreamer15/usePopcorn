@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useKey() {
+export function useKey(keyPressed, actionToPerform) {
     useEffect(
         function () {
             function callback(event) {
