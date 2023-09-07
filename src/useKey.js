@@ -4,8 +4,8 @@ export function useKey(keyPressed, actionToPerform) {
     useEffect(
         function () {
             function callback(event) {
-                if (event.code === "Escape") {
-                    onCloseMovie();
+                if (event.code === keyPressed) {
+                    actionToPerform();
                 }
             }
 
@@ -14,6 +14,6 @@ export function useKey(keyPressed, actionToPerform) {
             return function () {
                 document.removeEventListener("keydown", callback)
             }
-        }, [onCloseMovie]
+        }, [actionToPerform]
     );
 }
