@@ -256,8 +256,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
   useEffect(
     function () {
-      if (userRating)
-        return countRef.current++;
+      if (userRating) countRef.current++;
     },
     [userRating]
   );
@@ -287,7 +286,9 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
       getMovieDetails(selectedId);
 
-    }, [selectedId]);
+    },
+    [selectedId]
+  );
 
 
   useEffect(
